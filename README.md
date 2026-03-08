@@ -6,7 +6,7 @@
 
 ## NWF for Natural Language Processing
 
-`nwf-nlp` provides Transformer-based text encoders that produce **semantic charges** `(z, sigma)` for incremental learning, semantic search, and classification. Built on HuggingFace models (BERT, RoBERTa, DistilBERT) with a custom head for uncertainty estimation.
+`nwf-nlp` provides Transformer-based text encoders that produce **semantic charges** `(z, sigma)` for incremental learning, semantic search, and classification. Built on HuggingFace models (BERT, RoBERTa, DistilBERT) with a custom head for uncertainty estimation. Uses `nwf-core` Charge (supports `alpha` for weighted superposition since 0.3+).
 
 ### Features
 
@@ -92,6 +92,7 @@ Notebook: `notebooks/20newsgroups.ipynb`
 | **Incremental text classification** | Add new categories without retraining | TransformerEncoder, Field, k-NN |
 | **Semantic search** | Find documents by query in charge space | encode(query), Field.search |
 | **Topic modeling** | Cluster documents by latent charges | z, sigma from TransformerEncoder |
+| **Weighted charges** | Charge.alpha for category importance (nwf-core 0.3+) | Charge(z, sigma, alpha=...) |
 
 ---
 
