@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nwf-nlp"
-version = "0.1.0"
+version = "0.1.1"
 description = "NWF for NLP: Transformer encoders (BERT, DistilBERT) with (z, sigma) output for incremental learning, semantic search, text classification."
 readme = "README.md"
 license = {text = "MIT"}
