@@ -30,6 +30,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["black", "isort", "flake8", "pytest"]
+examples = ["matplotlib>=3.5"]
+all = ["nwf-nlp[dev,examples]"]
 
 [project.urls]
 Homepage = "https://github.com/romero19912017-ui/nwf-nlp"

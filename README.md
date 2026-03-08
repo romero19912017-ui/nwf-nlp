@@ -67,18 +67,31 @@ for i, text in enumerate(texts):
 
 ---
 
-## Example: 20 Newsgroups
+## Examples
 
-Classification and incremental category addition.
+Install with examples: `pip install nwf-nlp[examples]`
 
+| Script | Description |
+|--------|-------------|
+| [20newsgroups.py](examples/20newsgroups.py) | Incremental text classification: 3 categories, add sci.med without retraining |
+
+Run:
 ```bash
-cd examples && python 20newsgroups.py
+python examples/20newsgroups.py --epochs 2 --k 5
+python examples/20newsgroups.py --save results/nlp.png
 ```
 
-- Loads 20 Newsgroups (3 categories)
-- Trains TransformerEncoder head (2 epochs)
-- k-NN classification in charge space
-- Adds new category (sci.med) without retraining
+Notebook: `notebooks/20newsgroups.ipynb`
+
+---
+
+## Application areas (сферы применения)
+
+| Area | Use case | Components |
+|------|----------|------------|
+| **Incremental text classification** | Add new categories without retraining | TransformerEncoder, Field, k-NN |
+| **Semantic search** | Find documents by query in charge space | encode(query), Field.search |
+| **Topic modeling** | Cluster documents by latent charges | z, sigma from TransformerEncoder |
 
 ---
 
