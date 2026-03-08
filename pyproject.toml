@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nwf-nlp"
+version = "0.1.0"
+description = "NWF for NLP: Transformer encoders (BERT, DistilBERT) with (z, sigma) output for incremental learning, semantic search, text classification."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Belousov Roman Sergeevich", email = "roma.belyy.5550955@mail.ru"}]
+keywords = ["nwf", "nlp", "transformers", "bert", "text-classification"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "nwf-core>=0.2.3",
+    "numpy>=1.21",
+    "torch>=1.10",
+    "transformers>=4.20",
+    "scikit-learn>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["black", "isort", "flake8", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/romero19912017-ui/nwf-nlp"
+Repository = "https://github.com/romero19912017-ui/nwf-nlp"
+Documentation = "https://github.com/romero19912017-ui/nwf-nlp"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["nwf.nlp"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
